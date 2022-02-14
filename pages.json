@@ -15,7 +15,43 @@
 				"navigationBarTitleText": "个人中心"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/cart/cart",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "购物车"
+              
+            }
+            
+        }
+        ,{
+            "path" : "pages/goods/goods",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "商品"
+              
+            }
+            
+        }
+        ,{
+            "path" : "pages/auth/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/auth/register",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uView",
@@ -24,19 +60,30 @@
 	},
 	"tabBar": {
 	    "color": "#909399",
-	    "selectedColor": "#303133",
+	    "selectedColor": "#1296db",
 	    "borderStyle": "black",
 	    "backgroundColor": "#ffffff",
 	    "list": [{
 	        "pagePath": "pages/index/index",
-	        "iconPath": "static/index.png",
-	        "selectedIconPath": "static/index-selected.png",
+	        "iconPath": "static/icon/home01.png",
+	        "selectedIconPath": "static/icon/home02.png",
 	        "text": "首页"
-	    }, {
+	    },  {
+		    "pagePath": "pages/goods/goods",
+		    "iconPath": "static/icon/goods01.png",
+		    "selectedIconPath": "static/icon/goods02.png",
+		    "text": "商品"
+		},{
+	        "pagePath": "pages/cart/cart",
+	        "iconPath": "static/icon/cart01.png",
+	        "selectedIconPath": "static/icon/cart02.png",
+	        "text": "购物车"
+	    },{
 	        "pagePath": "pages/center/index",
-	        "iconPath": "static/center.png",
-	        "selectedIconPath": "static/center-selected.png",
+	        "iconPath": "static/icon/me01.png",
+	        "selectedIconPath": "static/icon/me02.png",
 	        "text": "我"
-	    }]
+	    }
+		]
 	}
 }
