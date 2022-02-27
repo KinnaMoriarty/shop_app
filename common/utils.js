@@ -1,4 +1,5 @@
 const install =(Vue,vm)=>{
+	// 1.判断是否登录
 	const isLogin=()=>{
 		const token=vm.vuex_token;
 		if(!token){
@@ -29,9 +30,19 @@ const install =(Vue,vm)=>{
 		return true
 	}
 	
-	// 将工具挂载到vm实例上
+	// 2.更新用户信息
+	const updateUser=async()=>{
+		// 重新请求用户信息
+		const userInfo=await vm.$u.api.userInfo();
+		// 更新vuex_user
+		vm.$u.vuex('vuex_user',userInfo);
+	}
+	
+	
+	// 🎈将工具挂载到vm实例上
 	vm.$u.utils={
-		isLogin
+		isLogin,
+		updateUser
 	}
 }
 

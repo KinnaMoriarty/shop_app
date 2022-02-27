@@ -52,9 +52,10 @@ export default {
 			this.$u.vuex('vuex_user',userInfo);
 			// 登录之后跳转到来源页
 			const backUrl=uni.getStorageSync('back_url') || 'pages/index/index';
+			console.log(backUrl)
 			setTimeout(()=>{
 				this.$u.route({
-					type:'reLaunch',
+					type:'reLaunch',//使用reLaunch在app上会导致无法返回
 					url:backUrl
 				})
 			},1000)
@@ -63,7 +64,7 @@ export default {
 		// 2.跳转到注册
 		returnRegister(){
 			this.$u.route({
-				type:'reLaunch',
+				type:'reLaunch', 
 				url:'pages/auth/register'
 			})
 		},

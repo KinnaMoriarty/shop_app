@@ -1,4 +1,4 @@
-<template>
+git<template>
 	<view >
 		<!-- 轮播图 -->
 		<u-swiper :list="slides" class="u-skeleton-fillet" name="img_url" height="330"></u-swiper>
@@ -8,7 +8,7 @@
 		</view>
 		<!-- 卡片视图 -->
 			<u-row gutter="16" class="u-skeleton">
-				<u-col span="6" v-for="item in goods.length!==0?goods:[{},{},{},{},{},{}]">
+				<u-col span="6" v-for="item in goods">
 					<goods-card :item="item"></goods-card>	
 				</u-col>
 			</u-row>
@@ -19,7 +19,8 @@
 
 <script>
 	export default {
-		data() {
+		data(){
+			
 			return {
 			sortList:[
 				{name:'默认'},
@@ -29,7 +30,7 @@
 			],
 			currentSort:0,
 			slides:[],
-			goods:[],
+			goods:[{},{},{},{}],
 			page:1,
 			loading:false
 			}
@@ -60,7 +61,9 @@
 				const res=await this.$u.api.index(params);
 				this.loading=false;
 				this.slides=res.slides;
-				this.goods=[...this.goods,...res.goods.data];
+				const status=this.goods[0];
+				console.log(status)
+				this.goods=(status===undefined)?res.goods.data:[...res.goods.data,...this.goods];
 			}
 		}
 	}

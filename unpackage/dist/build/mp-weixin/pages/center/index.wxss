@@ -1,0 +1,1 @@
+page{background-color:#ededed}.header{flex-direction:column;height:450rpx}.header .avatar{width:98px;height:100px}.header .name{text-align:center}.header .name .nameTitle{font-size:50rpx;font-weight:600}.unLogin{width:80%}.camera{width:54px;height:44px}.camera:active{background-color:#ededed}.user-box{background-color:#fff}

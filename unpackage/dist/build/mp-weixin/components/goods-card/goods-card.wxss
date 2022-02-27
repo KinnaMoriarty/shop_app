@@ -1,0 +1,1 @@
+.goods-item{padding:30rpx;margin-top:30rpx;box-shadow:0 12rpx 20rpx rgba(0,0,0,.1)}.goods-item .goods-title{margin:20rpx 0 5rpx 0;font-weight:600;font-size:32rpx;width:100%}.goods-item .goods-price{color:red;width:30%}.goods-item .goods-sale{color:#888;width:30%}
